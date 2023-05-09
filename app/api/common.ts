@@ -25,7 +25,7 @@ export async function requestOpenai(req: NextRequest) {
     console.log("[Org ID]", process.env.OPENAI_ORG_ID);
   }
 
-  if (!authValue || !authValue.startsWith("Bearer sk-")) {
+  if (!authValue) {
     console.error("[OpenAI Request] invlid api key provided", authValue);
   }
 
